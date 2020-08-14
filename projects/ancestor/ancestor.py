@@ -15,7 +15,7 @@ def earliest_ancestor(ancestors, starting_node):
                 famtree.add_vertex(i)
         famtree.add_edge(tup[1], tup[0])
     ancestry = famtree.dft(starting_node)[1:]
-    streams = {}
+     streams = {}
     for a in ancestry:
         stream = famtree.bfs(starting_node, a)
         gens = len(stream)
@@ -31,4 +31,4 @@ def earliest_ancestor(ancestors, starting_node):
         return min(candidos)
     return -1
 
-print(earliest_ancestor(test_ancestors, 10))
+print(earliest_ancestor(test_ancestors, 6))
